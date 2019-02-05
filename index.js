@@ -1,6 +1,8 @@
 var Word = require("./word.js");
 var inquirer = require("inquirer");
 var newWord;
+var correct = [];
+var guessedArr = [];
 //counter
 var i = 0;
 var guessesLeft = 8;
