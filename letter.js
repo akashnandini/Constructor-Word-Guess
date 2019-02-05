@@ -10,7 +10,7 @@ function Letter(letter) {
     if (this.guessed === true) {
       return this.letter;
     } else {
-      return "_";
+      return " _";
     }
   };
 

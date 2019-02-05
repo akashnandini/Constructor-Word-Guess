@@ -24,5 +24,11 @@ var Word = function(randomWord) {
       this.letterArray[i].check(input);
     }
   };
+  this.isSolved = function() {
+    for (var i = 0; i < this.letterArray.length; i++) {
+      if (this.letterArray[i].guessed === false) return false;
+    }
+    return true;
+  };
 };
 module.exports = Word;
