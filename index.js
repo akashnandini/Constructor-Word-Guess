@@ -22,7 +22,7 @@ function startGame() {
   var comparisonWord = newWord.toString();
   console.log("comparison  " + comparisonWord);
   console.log("pickedword  " + pickedword);
-  console.log("Guesses remaining:  " + (-i + 8));
+  console.log("Guesses remaining:  " + (guessesLeft - i));
 
   if (i < guessesLeft && comparisonWord != pickedword.toLowerCase()) {
     i++;
