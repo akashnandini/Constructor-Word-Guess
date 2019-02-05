@@ -12,16 +12,14 @@ var Word = function(randomWord) {
   this.toString = function() {
     answerLog = "";
     for (var i = 0; i < this.letterArray.length; i++) {
-      // var newObj = new Letter(this.letterArray[i]);
       answerLog = answerLog + this.letterArray[i].to_response_String();
     }
-    console.log("answerLog===" + answerLog);
+    //console.log("answerLog===" + answerLog);
     return answerLog;
   };
 
   this.userGuess = function(input) {
     for (var i = 0; i < this.letterArray.length; i++) {
-      // var newObj = new Letter(this.letterArray[i]);
       this.letterArray[i].check(input);
     }
   };

@@ -14,7 +14,7 @@ var randomWord = function() {
   pickedword = word_arr[randomNumber].toLowerCase();
   //console.log("pickedword Word:  " + pickedword);
   newWord = new Word(pickedword);
-  console.log("newWord===" + newWord);
+  //console.log("newWord===" + newWord);
   startGame();
 };
 
@@ -62,7 +62,8 @@ function startGame() {
         }
       ])
       .then(function(response) {
-        if (!response.PlayAgain) console.log("Plese visit again!!");
+        if (response.PlayAgain) randomWord();
+        else console.log("Thank You!!!Plese visit again!!");
       });
   }
 }
