@@ -12,11 +12,9 @@ var word_arr = ["Moana", "Zootopia", "Sing", "Trolls"];
 randomWord = function() {
   i = 0;
   var randomNumber = Math.floor(Math.random() * word_arr.length);
-  //console.log("randomNumber===" + randomNumber);
   pickedword = word_arr[randomNumber].toLowerCase();
   //console.log("pickedword Word:  " + pickedword);
   newWord = new Word(pickedword);
-  //console.log("newWord===" + newWord);
   guessedArr = [];
   startGame();
 };
@@ -24,7 +22,6 @@ randomWord = function() {
 function startGame() {
   var guessedWord = newWord.toString();
   console.log("\nGuessed Word  " + guessedWord);
-  //console.log("pickedword  " + pickedword);
   console.log("\nGuesses remaining:  " + (guessesLeft - i));
 
   if (i < guessesLeft && guessedWord != pickedword.toLowerCase()) {
@@ -46,9 +43,6 @@ function startGame() {
         } else {
           console.log("Already guessed");
         }
-        //guessedArr.push(response.guess);
-        //console.log("\n Guessed Letters " + guessedArr);
-        //newWord.userGuess(response.guess);
         startGame();
       });
   } else if (guessedWord === pickedword) {
